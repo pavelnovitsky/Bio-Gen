@@ -1,0 +1,37 @@
+# === Genomic Data ===
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# EXCEPT the test data
+!test_data/
+!test_data/micro_R1.fastq.gz
+!test_data/micro_R2.fastq.gz
+
+# === Pipeline Outputs ===
+# Ignore the results directory entirely (auto-generated for every run)
+results/
+
+# === Intermediate Bioinformatics Files ===
+# These are temporary files created during assembly/alignment
+*.sam
+*.bam
+*.bai
+*.fai
+*.amb
+*.ann
+*.bwt
+*.pac
+*.sa
+
+# SPAdes intermediate folders (e.g., K21, K33, etc.)
+K[0-9]*/
+
+# === OS & IDE ===
+# System-specific files and IDE configurations
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+.venv/

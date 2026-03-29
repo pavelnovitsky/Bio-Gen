@@ -1,0 +1,24 @@
+# Docker Compose configuration for Genome Assembly Pipeline
+services:
+  # Main assembly service
+  assembler:
+    # Build the image using the Dockerfile in the current directory
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    # Tags the image as v3.4
+    image: genome-pipeline:v1.0.0.0
+    # Mounts the current local directory to /data inside the container
+    # This allows the container to read your FASTQ files and write results back to your host
+    volumes:
+      - .:/data
+    # Resource limits for the container
+    # Adjust these based on your MacBook's available resources in Docker Desktop
+    deploy:
+      resources:
+        limits:
+          cpus: '8'
+          memory: 16G
+    # Leave command empty or remove it. 
+    # The Dockerfile ENTRYPOINT ["run_assembly"] handles the execution.
+    command: []
