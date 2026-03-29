@@ -1,5 +1,8 @@
 # Bio-Gen: Automated Bacterial Assembly & Annotation Pipeline
 
+> [!IMPORTANT]
+> 🎓 **Teaching or taking a course?** Check out our [**Students Quick Start Guide**](./STUDENTS_GUIDE.md) for step-by-step lab instructions.
+
 A robust, containerized pipeline for the *de novo* assembly, iterative polishing, and functional annotation of bacterial genomes. Built on **Ubuntu 24.04 (Noble)**, Bio-Gen automates the modern microbiology workflow, transforming raw sequencing reads into polished, annotated genomes and interactive reports.
 
 ## 🎯 Why Bio-Gen?
@@ -38,6 +41,9 @@ docker compose build
 ```
 
 ## 📈 Usage
+
+> [!TIP]
+> **New to bioinformatics?** Follow our [**Step-by-Step Students Guide**](./STUDENTS_GUIDE.md) to complete your lab assignment easily.
 
 ### ⚡ Quick Start (Recommended)
 Run the full pipeline on your data with a single command. This will automatically check inputs, trim reads, assemble the genome, polish the sequence, and annotate features:
